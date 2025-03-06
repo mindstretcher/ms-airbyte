@@ -387,7 +387,6 @@ class Salesforce:
     @staticmethod
     def get_pk_and_replication_key(json_schema: Mapping[str, Any]) -> Tuple[Optional[str], Optional[str]]:
         fields_list = json_schema.get("properties", {}).keys()
-
         pk = "Id" if "Id" in fields_list else None
         replication_key = None
         if "LastModifiedDate" in fields_list:
