@@ -390,9 +390,7 @@ class Salesforce:
 
         pk = "Id" if "Id" in fields_list else None
         replication_key = None
-        if "SystemModstamp" in fields_list:
-            replication_key = "SystemModstamp"
-        elif "LastModifiedDate" in fields_list:
+        if "LastModifiedDate" in fields_list:
             replication_key = "LastModifiedDate"
         elif "CreatedDate" in fields_list:
             replication_key = "CreatedDate"
